@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            height: 200vh;
+        }
+
+        .out_box {
+            position: relative;
+            top: 200px;
+            margin-top: 1000px;
+            height: 100vh;
+            background-color: green;
+        }
+        .in_box {
+
+            position: sticky;
+            top: 20px;
+            height: 50px;
+            background-color: blue;
+        }
+
+        .fix{
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="out_box">
+        <div class="in_box"></div>
+    </div>
+
+    <div class="fix">
+       
+    </div>
+    
+</body>
+</html>

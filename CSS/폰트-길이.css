@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+div{
+    border: 1px solid red
+}
+.div_1{
+    width: 100px;
+    height: 100px;
+}
+.div_2{
+    margin: 30px;
+    width: 100px;
+    height: 100px;
+}
+.par_div{
+    width: 300px;
+    height: 200px;
+}
+.div_3{
+    border-color: blue;
+    width: 50vw;
+    height: 50vh;
+}
+.nanum-pen-script-regular {
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.div_5{
+    border: 3px solid rgb(94, 43, 43);
+
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    
+    /* 정령, left, right, center */
+    text-align: center;
+
+    /* em: 부모 태그에서 정의한 font-size를 기준 */
+    /* 부모태그가 10px, 2em (200%) => 20px */
+    /* rem: HTML에서 font-size를 정의 (기본 10px), 상대적 크기가 결정 */
+    /* 1rem => html font 기준 100%(10px => 1.8 (180%) => 18px) */
+    line-height: 1.8rem; /* 줄 간격 */
+    letter-spacing: 1px; /* 글자 간 간격 (자간)*/
+    word-spacing: 10px; /* 단어 간 간격 */
+    text-indent: 80px;  /* 문단 첫 줄 들여쓰기 */
+}
+a {
+     text-decoration: none;
+     color: black
+}
+.font-1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" />
+    <input type="button" value="클릭" onclick="클릭();" />
+
+    <select id = 'sel_fruit'>
+        <option>사과</option>
+        <option>바나나</option>
+        <option>멜론</option>
+    </select>
+
+
+
+    <script>
+        function 클릭(){
+            // id의 특징, 중복된 id는 갖고 올 수 없다.
+            // 이런 이유로, checkbox, radio에서는 사용 지양.
+            // 실행은 문제가 없으나, 단 개발자가 원하는 코드는 안 나올 수 있다.(오류)
+           let sel = document.getElementById('sel_fruit');
+            console.log(sel.value);
+        }
+
+    </script>
+    
+</body>
+</html>

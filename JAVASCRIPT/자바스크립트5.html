@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <input type="button" value="버튼 클릭1" onclick="클릭()">
+    <input type="button" value="버튼 클릭2" onclick="클릭2()">
+
+    <script>
+        // var, let, const(변수 타입)
+        var 변수v = 100;
+
+        let 변수2 = "ABC";
+
+        function 클릭(){
+            변수v = 500;
+            console.log(변수v);
+
+            변수2 = "bbb";
+            
+            console.log(변수2);
+            
+        }
+
+        function 클릭2(){
+            console.log(변수v);
+            console.log(변수2);
+        }
+
+    </script>
+
+</body>
+</html>

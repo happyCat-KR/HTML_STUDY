@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복합식별자_연습_01</title>
+    <style>
+        .div_a {
+            
+            width: 50px;
+            height: 50px;
+        }
+        div.div_a {
+            border: 1px solid red;
+                        
+        }
+        input[name=hobbys] {
+            margin: 15px;
+        }
+
+        .out_a > div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+        .out_a div {
+            font-size: 16px;
+            color: magenta;
+        }
+        .div_c div{
+           
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h3>태그 + 식별자</h3>
+    <div class="div_a"></div>
+    <div class="div_a"></div>
+    <input type="radio" class="div_b" name="hobbys">서울
+    <input type="radio" class="div_b" name="hobbys"/>경기
+    <div class="div_b"></div>
+    
+    <h4>하위 식별자</h4>
+    <div class="out_a">A
+        <div class="div_c">C
+            <div class="div_d">D</div>
+            <div class="div_e">E</div>
+            <input type="text"/>
+
+        </div>
+        <div class="div_d">D</div>
+
+    </div>
+
+    <style>
+        .div_f {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+
+            padding: 10px;
+        }
+
+        h1 + input[type='text'] {
+            border: 1px solid red;
+        }
+
+        h1 ~ input[type='text'] {
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- 근접된 태그에 적용 -->
+    <h4>형제 식별자</h4>
+    <div class="div_f">
+        <input type="text" />
+        <h1>Hello World</h1>
+        <input type="text" />
+        <input type="text" />
+        <h6>구분선</h6>
+        <input type="text" />
+        
+    </div>
+</body>
+</html>

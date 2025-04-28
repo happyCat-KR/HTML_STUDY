@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+<body>
+    <!-- input은 이제 사용자로부터 데이터를 입력 받는 공간 -->
+    <!-- java로 따지면, Scanner 부분 -->
+
+    <!-- 기본 데이터 입력, 텍스트 -->
+    <span>글자 입력: </span><input type="text" /><br/>
+    <span>비밀번호: </span><input type="password" /><br/>
+
+    <span>숫자만: </span><input type="number" /><br/>
+    <span>이메일: </span><input type="email" /><br/>
+    
+    <!-- tel, 생략 -->
+    <span>과목선택: </span>
+    <input type="radio" name="subject" />수학
+    <input type="radio" name="subject" checked/>과학
+    <input type="radio" name="subject" />국어<br/>
+
+    <span>취미: </span>
+    <input type="checkbox" name="subject" />자전거
+    <input type="checkbox" name="subject" checked/>수영
+    <input type="checkbox" name="subject" />달리기<br/>
+
+    <!-- range, 슬라이드, 볼륨처럼 좌우로 선택 -->
+    <input type="range" />
+    <!-- selectBox -->
+    <select>
+        <option>서울</option>
+        <option>인천</option>
+        <option>경기</option>
+    </select><br/>
+
+    <!-- 날짜 -->
+    <input type="month"/><br/>
+
+    <!-- 특수 기능 -->
+    <input type="file"/><br/>
+
+    <!-- 개발자들이 사용하는 tag, 어지간하면 사용하지 않는다.-->
+    <input type="hidden" />
+
+    <!-- 색깔 선택 -->
+    <!-- 사용자가 원하는 색상을 고그고 싶을 때 -->
+    <input type="color"/><br/>
+
+    <!-- area, 여러 줄 텍스트 입력하는 input 창 -->
+    <textarea></textarea><br/>
+
+    <h1>from 태그</h1>
+
+    <form>
+        <span>아이디: </span><input type="text" placeholder="아이디를 입력해주세요."/><br/>
+        <span>비밀번호: </span><input type="password" /><br/>
+
+        <!-- 사용자 입력 정보, reset -->
+        <input type="reset" value = "리셋 적용하기" />
+        <input type="button" value="버튼 클릭" />
+        <button>버튼 클릭2</button>
+
+        <input type="submit" value="회원가입" />
+
+    </form>
+</body>
+</html>

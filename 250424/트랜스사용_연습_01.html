@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜스사용_연습_01</title>
+    <style>
+        .outline, .box {
+            width: 60px;
+            height: 60px;
+        }
+        .outline {
+            margin-top: 20px;
+            border: 3px solid green;
+            z-index: 2; /* 화면에 보여주는 우선순위 (숫자가 높을수록 위)*/
+        }
+        .box {
+            background-color: blue;
+            z-index: 1;
+        }
+        .tran1 {
+            transform: translateX(50px);
+        }
+        .tran2 {
+            transform: translateX(-20px);
+        }
+        .tran3 {
+            transform: translateY(30px);
+        }
+        .tran4 {
+            transform: translateY(-30px);
+        }
+        .tran5 {
+            transform: translate(50px, 30px);
+        }
+        .scal1:hover {
+            transform: scaleX(1.3) scaleY(0.5);/* 1 => 100%, 0.1 => 10% */
+            
+        }
+        
+        .scal2:hover {
+            transform: scale(1.5);
+            transform: scale(1.5, 0.4);
+        }
+        .rotX {
+            transform: rotate(50deg);
+        }
+        .skewX {
+            transform: skewX(50deg);
+        }
+        .skewY {
+            transform: skewY(50deg);
+        }
+    </style>
+</head>
+<body>
+     <div class="outline">
+        <div class="box tran1"></div>
+     </div>
+    
+     <div class="outline">
+        <div class="box tran2"></div>
+     </div>
+    
+     <div class="outline">
+        <div class="box tran3"></div>
+     </div>
+    
+     <div class="outline">
+        <div class="box tran4"></div>
+     </div>
+    
+     <div class="outline">
+        <div class="box tran5"></div>
+     </div>
+
+     <hr>
+    
+     <div class="outline">
+        <div class="box scal1"></div>
+     </div>
+    
+     <div class="outline">
+        <div class="box scal2"></div>
+     </div>
+
+     <hr>
+    
+     <div class="outline">
+        <div class="box rotX"></div>
+     </div>
+    
+     <div class="outline">
+        <div class="box skewX"></div>
+     </div>
+    
+     <div class="outline">
+        <div class="box skewY"></div>
+     </div>
+    
+     <div class="outline">
+        <div class="box"></div>
+     </div>
+    
+</body>
+</html>

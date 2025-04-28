@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-size: 10px;
+        }
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+        }
+        .out_box {
+            border: 1px solid black;
+            width: 50vw;
+            height: 200vh;
+            margin-top: 100px;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 10px;
+
+            
+
+        }
+        .in_box {
+            box-shadow: 5px 5px 10px rgba(1, 55, 64, 0.2);
+            border-radius: 10px;
+            height: 100px;
+            padding: 10px;
+
+                    
+            
+        }
+        .tag_outbox {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            gap: 10px;
+        }
+        .tag_inbox {
+            
+            background-color: rgb(84, 180, 249);
+            color: aliceblue;
+            border-radius: 10px;
+            font-weight: 500;
+            padding:0px 3px;
+        }
+        .span_title {
+            border: 1px solid black;
+            font-weight: 800;
+            
+        }
+        .btn_like {
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <div class="out_box">
+        <div class="in_box">
+            <div class="tag_outbox">
+                <div class="tag_inbox">프로그래밍</div>
+                <div class="tag_inbox">웹개발</div>
+            </div>
+            <span class="span_title">HTML과 CSS기초</span><br/>
+            <span>설명</span></br>
+            <input type="button" class="btn_like" onclick="">
+            
+        </div>
+        <div class="in_box">
+            <div class="tag_outbox">
+                <div class="tag_inbox">태그1</div>
+                <div class="tag_inbox">태그2</div>
+            </div>
+            <span>HTML과 CSS기초</span><br/>
+            <span>설명</span></br>
+            <span>좋아요</span>
+            
+        </div>
+        <div class="in_box">
+            <div class="tag_outbox">
+                <div class="tag_inbox">태그1</div>
+                <div class="tag_inbox">태그2</div>
+            </div>
+            <span>HTML과 CSS기초</span><br/>
+            <span>설명</span></br>
+            <span>좋아요</span>
+            
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <form>
+        <input type="text" placeholder="아이디 입력" id="user_id">
+        <input type="password" placeholder="비밀번호 입력" id="user_pw">
+
+        <input type="button" value="로그인" onclick="클릭();"/>
+    </form>
+
+    <script>
+        function 클릭(){
+            const user_id = document.getElementById('user_id').value;
+            const user_pw = document.getElementById('user_pw').value;
+            
+            if(user_id==='admin'&&user_pw==='1234'){
+                alert('로그인성공');
+            }else{
+                alert('로그인실패');
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 10px;
+        }
+        div {
+            margin-bottom: 20px;
+        }
+        .result {
+            border: 1px solid black;
+            height: 30px;
+            padding: 3px 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            color: black
+            
+        }
+        .btn_color {
+            background-color: green;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>텍스트 스타일 조정</h1>
+    <div>
+        <span>텍스트 입력:</span><br/>
+        <input type="text" id="text_box"/>
+        <input type="button" value="바꾸기" onclick="클릭()"/>
+    </div>
+    <div>
+        <span>텍스트 색상</span><br/>
+        <input type="radio" name="text_color" onclick="색상선택('yellow')">노랑
+        <input type ="radio" name="text_color" onclick="색상선택('black')">검정
+        <input type="radio" name="text_color" onclick="색상선택('green')">초록
+        <input type="radio" name="text_color" onclick="색상선택('blue')">파랑
+        <input type="radio" name="text_color" onclick="색상선택('red')">빨강
+    </div>
+    
+    <div>
+        <span>텍스트 스타일: </span><br/>
+        <input type="checkbox" onclick="굵기(event)">굵게
+        <input type="checkbox" onclick="기울기(event)">기울기
+        
+    </div>
+    <div>
+        <span>폰트 크기:</span><br/>
+        <input type="button" class="btn_color" value="+" onclick="글자크게()">
+        <span id="px_id">20px</span>
+        <input type="button" class="btn_color" value="-" onclick="글자작게()">
+
+    </div>
+
+    <div class="result" id="resultText">결과값</div>
+    
+
+    <script>
+        const rt = document.getElementById('resultText');
+        let text_size = 20;
+        
+
+        function 클릭() {
+            rt.textContent = document.getElementById('text_box').value;
+            document.getElementById('text_box').value = "";
+        }
+        function 색상선택(val) {
+            rt.style.color = val;
+        }
+        function 굵기(event) {
+            event.target.checked ? rt.style.fontWeight = 'bold' : rt.style.fontWeight = 'normal';  
+        }
+        function 기울기(event) {
+            event.target.checked ? rt.style.fontStyle = 'italic' : rt.style.fontStyle = 'normal';
+        }
+        function 글자크게() {
+            text_size++;
+            rt.style.fontSize = text_size+'px'
+            document.getElementById("px_id").textContent=text_size+"px"
+        }
+        function 글자작게() {
+            text_size--;
+            rt.style.fontSize = text_size+'px'
+            document.getElementById("px_id").textContent=text_size+"px"
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+    </script>
+
+</head>
+<body>
+    <!-- 자바스크립트 사용영역 -->
+    <script>
+    
+    // 변수
+    // var, let, const
+    //java에서 변수 선언 방식
+    //데이터타입 변수명 = '값';
+    //데이터타입 정수, 논리, 문자.
+
+    //개발자 편의를 위해서 데이터타입을 그냥 통일.
+    // 단, 사용 방법을 통일 시켰다는거지 문자, 숫자, 논리 타입 등 삭제 된 것은 아니다.
+
+    let 변수 = 'aa';
+    let 변수2 = 100;
+
+    console.log(typeof(변수));
+    console.log(typeof(변수2));
+
+    //출력
+
+    console.log(변수);  //system.out.print하고 비슷한 기능
+    console.log(변수2);
+     
+    //조건문
+    if(변수 === 'aa'){
+        console.log('aa가 맞습니다.');
+    }
+
+    if(변수2 === 100){
+        console.log('100이 맞습니다.');
+    }
+
+    let 변수3 = '300';
+    console.log(Number(변수3)+500); //숫자(정수, 실수 모두)
+    console.log(parseInt(변수3)+500);   // (정수로 변환)
+    
+    console.log(parseFloat(변수3)+500.3);   // (실수로 변환)
+    console.log(String(200));   // (문자로 변환)
+    
+    // 상수
+    const PIN = '정의';
+
+    </script>
+    
+</body>
+</html>

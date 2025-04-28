@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제15</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+
+    <span>이름: </span><input type="text" id="user_name" onkeyup="이름(event)"/><br/>
+    <span>글자수: </span><span id="letter_num"></span><br/>
+
+    <span>나이: </span><input type="text" id="user_age" onchange="나이(event)"/><br/>
+    <span id="age_check"></span><br/>
+    <input type="button" value="가입하기" onclick="가입하기()"/>
+
+    <script>
+        function 이름(e){
+            const user_name = e.target;
+            document.getElementById('letter_num').textContent = user_name.value.length;
+        }
+
+        function 나이(e){
+            const user_age = e.target;
+            let age_result = document.getElementById('age_check');
+
+            user_age.value < 20 ? age_result.textContent = "냐옹~" : age_result.textContent = "성인입니다.";
+
+            // if(user_age.value<20){
+            //     document.getElementById('age_check').textContent = "청소년입니다";
+            // }else{
+            //     document.getElementById('age_check').textContent = "성인입니다";
+            // }
+            
+        }
+
+        function 가입하기(){
+            const user_name = document.getElementById('user_name');
+            const user_age = document.getElementById('user_age');
+            console.log("이름: "+user_name.value);
+            console.log("나이: "+user_age.value);
+        }
+
+
+    </script>
+</body>
+</html>

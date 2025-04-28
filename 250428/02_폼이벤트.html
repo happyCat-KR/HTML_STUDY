@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- method 어떤 반식으로 보낼 것이냐 -->
+    <!-- @ get, post -->
+    <!-- put, petch, del, search -->
+     
+    <!-- submit은 javascript를 위해서 쓰는 기능이 아님. -->
+    <!-- 무조건 jsp를 호출하는 용도로 사용한다. -->
+    <!-- 물론 동작은 되는 데, 사고를 먼저치고, 사고예방(유효성 검사 기능이 없음.) -->
+    <form action="[보내는 장소]" method="">
+        <input type="text" placeholder="이름" onchange="key(event)"/><br/>
+        <input type="radio" name="rat" value="1">대한민국
+        <input type="radio" name="rat" value="2">미국<br/>
+        
+        <select onchange="체인지(event)" id="sel">
+            <option value="0">구분</option>
+            <option value="1">사각형</option>
+            <option value="2">원</option>
+            <option value="3">삼각형</option>
+        </select><br/>
+
+        <input type="submit" value="등록" />
+    </form>
+
+    <script>
+
+        function 체인지(e) {
+            const val = e.target.value;
+            alert(val);
+        }
+
+        function key(e) {
+            const tar = e.target.value;
+            console.log(tar);
+            
+        }
+        
+        function 등록() {
+
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>

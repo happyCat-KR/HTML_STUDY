@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+        body {
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            background-image: url('./back.jpg');
+            
+        }
+        .out_box {
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        .in_box {
+            border: 1px solid black;
+            width: 100px;
+            height: 150px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            font-family: "Nanum Pen Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 30px;
+            color: green;
+            border-radius: 10%;
+
+            
+            
+            
+        }
+        .div_a {
+            background-image: url('./card.jpg');
+            background-size: cover;
+            
+        }
+        .div_b {
+            background-image: url('./card2.jpg');
+            background-size: cover;
+            
+        }
+        .div_c {
+            background-image: url('./jorker.jpg');
+            background-size: cover;
+            
+        }
+        </style>
+</head>
+<body>
+    <div class="out_box">
+
+        <div class="div_a in_box">카드 1</div>
+        <div class="div_b in_box">카드 2</div>
+        <div class="div_c in_box">카드 3</div>
+        
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사</title>
+    <link rel="stylesheet" href="설문CSS.css" />
+</head>
+<body style="background-image: url(./cat.jfif);">
+    <div class="background">
+        <h1>설문조사</h1>
+
+        <form>
+                <span>참여자: </span><input type="text" id="user"/>
+            <div>
+
+                <span>좋아하는 도시: </span>
+                <input type="radio" name="likeCity" value="서울"/>서울
+                <input type="radio" name="likeCity" value="인천"/>인천
+                <input type="radio" name="likeCity" value="대전"/>대전
+                <input type="radio" name="likeCity" value="부산"/>부산
+                <input type="radio" name="likeCity" value="광주"/>광주
+                <input type="radio" name="likeCity" value="그외"/>그 외
+                <input type="text" id="other"/>
+                
+            </div>
+
+            <div>
+
+                <span>좋아하는 이유: </span>
+                <input type="checkbox" name="likeReason" value="먹거리"/>먹거리
+                <input type="checkbox" name="likeReason" value="레저"/>레저
+                <input type="checkbox" name="likeReason" value="힐링"/>힐링
+                <input type="checkbox" name="likeReason" value="교통"/>교통
+                <input type="checkbox" name="likeReason" value="쇼핑"/>쇼핑
+                <input type="checkbox" name="likeReason" value="관광"/>관광
+                
+                
+                
+            </div>
+
+            <div>
+
+                <input type="button" value="제출" onclick="제출();"/>
+                <input type="reset" value = "초기화" />
+
+            </div>
+
+
+        </form>
+
+    </div>
+    
+    
+
+    
+
+
+    <script>
+        function 제출(){
+            const user_name = document.getElementById('user').value;
+            const arrLike = document.getElementsByName('likeCity');
+            const arrReason = document.getElementsByName('likeReason');
+
+            let checkLikeCity = '';
+            let checkLikeReason = [];
+
+            for(let i = 0; i<arrLike.length; i++){
+                if(arrLike[i].checked){
+                    
+                    checkLikeCity = arrLike[i].value; 
+                    if(checkLikeCity === '그외'){
+                        checkLikeCity = document.getElementById('other').value;
+                    }
+
+                }
+            }
+
+            for(let i = 0; i<arrReason.length; i++){
+                if(arrReason[i].checked){
+                    checkLikeReason.push(arrReason[i].value); 
+                }
+            }
+            
+            console.log("참여자: "+user_name);
+            console.log("좋아하는 도시: "+checkLikeCity);
+            console.log("좋아하는 이유: "+checkLikeReason.join(', '));
+
+
+        }
+    </script>
+</body>
+</html>

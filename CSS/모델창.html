@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: none;
+        }
+        .modal_out {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            display: none;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal_in {
+            width: 400px;
+            height: 300px;
+
+            background-color: white;
+            border-radius: 10px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            font-weight: 900;
+            font-size: 50px;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <h1>모델 창</h1>
+    <input type="button" value="창 보이기" onclick="창보이기()"/><br/>
+    <img src="./hi.jpg" alt="냥이" width="300" height="300"/>
+
+    <div class="modal_out" id="helloWorld1">
+        <div id="helloWorld2" class="modal_in" onclick="창끄기()">
+            Hello World!
+        </div>
+
+    </div>
+    <script>
+        const hw1 = document.getElementById('helloWorld1');
+        const hw2 = document.getElementById('helloWorld2');
+        function 창보이기(){
+            hw1.style.display = 'flex';
+            hw2.style.display = 'flex';
+        }
+        function 창끄기(){
+            hw1.style.display = 'none';
+            hw2.style.display = 'none';
+        }
+
+    </script>
+</body>
+</html>

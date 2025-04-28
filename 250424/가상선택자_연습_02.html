@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상선택자_연습_02</title>
+    <style>
+        ol li {
+            height: 40px;
+            list-style-type: none;
+        }
+        ol li a {
+            text-decoration: none;
+            color: #000;
+            
+        }
+        ol li:hover {
+            background-color: gray;
+        }
+        ol li a:link {
+            background-color: blue;
+        }
+        ol li a:visited {
+            background-color: green;
+        }
+
+        .star::before {
+            content: '*';
+            color: red;
+        }
+        .star::after {
+            width: 10px;
+            height: 10px;
+            content: '';
+            position: absolute;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li><a href="http://www.naver.com" target="_blank">네이버</a></li>
+        <li><a href="http://www.naver.com" target="_blank">네이버</a></li>
+        <li><a href="http://www.daum.net" target="_blank">다음</a></li>
+    </ol>
+    <h2>회원 가입</h2>
+    <label class="star">아이디: </label><input type="text" placeholder="아이디를 입력해주세요."/>
+
+</body>
+</html>

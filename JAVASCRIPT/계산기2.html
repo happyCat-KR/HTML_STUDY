@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1"/>
+    <input type="text" id="num2"/>
+    <input type="radio" name="sign" value="+">+
+    <input type="radio" name="sign" value="-">-
+    <input type="radio" name="sign" value="*">*
+    <input type="radio" name="sign" value="/">/
+
+    <input type="button" value="계산" onclick="계산();"/>
+
+    <br/>
+    <p>결과: <span id="resultText"></span></p>
+
+    <script>
+        function 계산(){
+            const num1 = document.getElementById('num1').value;
+            const num2 = document.getElementById('num2').value;
+            const arr = document.getElementsByName('sign');
+
+            let sign = '';
+            let result = '';
+            for(let i = 0; i< arr.length; i++){
+
+                if(arr[i].checked){
+                    sign = arr[i].value;
+                }
+            }
+            
+            if(sign==='+'){
+                result = parseInt(num1)+parseInt(num2);
+            }else if(sign==='-'){
+                result = parseInt(num1)-parseInt(num2);
+            }else if(sign==='*'){
+                result = parseInt(num1)*parseInt(num2);
+            }else if(sign==='/'){
+                result = parseFloat(num1)/parseInt(num2);
+            }
+            
+            document.getElementById('resultText').textContent = result;
+
+        }
+
+    </script>
+    
+</body>
+</html>

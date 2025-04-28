@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        .div_1 {
+            width: 300px;
+            height: 300px;
+            border: 3px solid red;
+        }
+        .div_2 {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+        }
+        .div_3 {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_1">DIV 1</div>
+    <div class="div_2">ABS 2</div>
+    <div class="div_3">DIV 3
+        <div class="div_2">ABS 4</div>
+    </div>
+</body>
+</html>

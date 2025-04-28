@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>둘 중 하나 선택</h1>
+
+    <form>
+
+        <input type="radio" name="language" id="g1" value="1" />Front
+        <input type="radio" name="language" id="g1" value="2"/>Back
+        
+        <input type="button" value="선택" onclick="선택();"/>
+        
+
+    </form>
+    <script>
+        function 선택(){
+            //const test = document.getElementById('g1');
+            //console.log(test);
+
+            const arr = document.getElementsByName('language');
+
+            let results = '';
+
+            for(let i = 0; i< arr.length; i++){
+
+                console.log(arr[i].checked);
+                if(arr[i].checked){
+                    results = arr[i].value;
+                }
+            }
+            console.log(results);
+
+        }
+
+    </script>
+
+</body>
+</html>

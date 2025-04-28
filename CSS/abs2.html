@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>영화 카드</title>
+  <style>
+    body {
+        background-attachment: fixed;
+        background-image: url('hi.jpg');
+        background-size: 50px 50px;
+        height: 2000px;
+    }
+
+   
+    .div_1 {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 500px;
+      background-image: url('./냥이4.jpg');
+      background-size: 50px 50px;
+      margin-top: 1000px;
+      margin-left: 100px;
+      transition: opacity 0.3s ease;
+    }
+
+    .div_1:hover {
+      opacity: 0.7; /* 마우스 올리면 불투명 */
+    }
+
+    .abs_1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .abs_1 input {
+      padding: 6px 12px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .div_1:hover .abs_1 {
+      display: flex;
+    }
+
+    .out_box {
+
+        position: relative;
+        top: 200px;
+        margin-top: 1000px;
+        height: 200vh;
+        background-image: url('냥이.jpg');
+        background-size: 100px 100px;
+        
+    }
+  </style>
+</head>
+<body>
+    <div class="out_box">
+        <div class="div_1">
+          <div class="abs_1">
+            <input type="button" value="예매" onclick="예매클릭()">
+            <input type="button" value="상세보기" onclick="상세보기클릭()">
+          </div>
+        </div>
+
+    </div>
+
+  <script>
+    function 예매클릭() {
+      alert("예약되었습니다!");
+    }
+
+    function 상세보기클릭() {
+      alert("상세 정보를 확인합니다.");
+    }
+  </script>
+
+</body>
+</html>

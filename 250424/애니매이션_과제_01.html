@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니매이션_연습_01</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            background-image: url('./이미지/집거실배경1.jpg');
+            background-size: cover;
+        }
+
+        .top {
+            padding: 20px;
+
+            border: 1px solid black;
+            width: 100vw;
+            background-color: gray;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: end;
+            height: 100%;
+
+        }
+
+        .box {
+            width: 200px;
+            height: 300px;
+            background-image: none;
+            
+        }
+
+        input[type=button] {
+            padding: 3px 10px;
+
+            font-size: 30px;
+            font-weight: bold;
+
+            border-radius: 10%;
+            background-color: green;
+            color: white;
+
+        }
+
+        div.a {
+            animation-name: test_a;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+        }
+
+        div.b {
+            animation-name: test_b;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+        }
+
+        div.c {
+            animation-name: test_c;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+        }
+
+        div.d {
+            animation-name: test_d;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+        }
+
+        div.end {
+            animation-name: test_d;
+
+        }
+
+
+        @keyframes test_a {
+            0% {
+                transform: translate(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateX(300px)
+            }
+            100%{
+                transform: translateX(-300px)
+            }
+        }
+
+        @keyframes test_b {
+            0% {
+                transform: translate(0px) rotate(0deg);
+            }
+            20% {
+                transform: translate(100px, -100px);
+            }
+            40% {
+                transform: translate(200px, 0px);
+            }
+            
+            60% {
+                transform: translate(300px, -100px);
+            }
+            80% {
+                transform: translate(400px, 0px);
+            }
+            100%{
+                transform: translate(500px, -100px);
+            }
+
+        }
+
+        @keyframes test_c {
+            from {
+                transform: translate(0px) rotate(0deg);
+            }
+
+            to {
+                transform: translateY(-300px) rotate(540deg);
+            }
+
+        }
+
+        @keyframes test_d {
+            from {
+                transform: translate(0px) rotate(0deg);
+            }
+
+            to {
+                transform: translateY(300px) rotate(540deg);
+            }
+
+        }
+
+        @keyframes test_end {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                transform: translateY(0px)
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <top class="top">
+        <input type="button" value="효과-A" onclick="실행('a')" />
+        <input type="button" value="효과-B" onclick="실행('b')" />
+        <input type="button" value="효과-C" onclick="실행('c')" />
+        <input type="button" value="효과-D" onclick="실행('d')" />
+        <input type="button" value="초기화" onclick="실행('end')" />
+
+    </top>
+    <main class="main">
+
+        <div id="target1" class="box"></div>
+        <div id="target2" class="box"></div>
+        <div id="target3" class="box"></div>
+        <div id="target4" class="box"></div>
+    </main>
+
+    <script>
+        function 실행(val) {
+            const box1 = document.getElementById('target1');
+            const box2 = document.getElementById('target2');
+            const box3 = document.getElementById('target3');
+            const box4 = document.getElementById('target4');
+            
+
+            if(val==='a'){
+                box1.style.backgroundImage = 'url(./이미지/cat_happy.gif)'
+                box1.style.backgroundSize = 'cover';
+            }else if(val==='b'){
+                box2.style.backgroundImage = 'url(./이미지/cat_happy.gif)'
+                box2.style.backgroundSize = 'cover';
+            }else if(val==='c'){
+                box3.style.backgroundImage = 'url(./이미지/cat_happy.gif)'
+                box3.style.backgroundSize = 'cover';
+            }else if(val==='d'){
+                box4.style.backgroundImage = 'url(./이미지/cat_happy.gif)'
+                box4.style.backgroundSize = 'cover';
+            }else if(val==='end'){
+                box1.style.backgroundImage = null;
+                box2.style.backgroundImage = null;
+                box3.style.backgroundImage = null;
+                box4.style.backgroundImage = null;
+                
+                
+            }
+
+            // 기존 애니메이션 클래스 제거
+            box1.className = 'box';
+            box2.className = 'box';
+            box3.className = 'box';
+            box4.className = 'box';
+            
+            // 강제로 리플로우 발생시켜 애니메이션 리셋
+            void box1.offsetWidth;
+            void box2.offsetWidth;
+            void box3.offsetWidth;
+            void box4.offsetWidth;
+
+            // 새로운 애니메이션 클래스 추가
+            box1.classList.add(val);
+            box2.classList.add(val);
+            box3.classList.add(val);
+            box4.classList.add(val);
+        }
+
+    </script>
+
+</body>
+
+</html>

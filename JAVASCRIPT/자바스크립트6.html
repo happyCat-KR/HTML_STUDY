@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <span>id: </span><input type="text" id="text_id" placeholder="아이디를 입력해주세요."/><br/>
+        <span>pw: </span><input type="text" id="text_pw" placeholder="비밀번호를 입력해주세요."/><br/>
+        <input type="submit" value="버튼클릭" onclick="클릭();" />
+    </form>
+
+    <script>
+
+        function 클릭(){
+            // 태그 중에서, id가 누구냐를 찾는 기능.
+            let inp_id = document.getElementById('text_id');
+            console.log("id: "+inp_id.value);
+            let inp_pw = document.getElementById('text_pw');
+            console.log("pw: "+inp_pw.value);
+        }
+    </script>
+</body>
+</html>

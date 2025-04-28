@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>기본 사용 방법</h1>
+    <table border="1" cellspacing="0" cellpading="5">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>슈퍼맨</td>
+            <td>배트맨</td>
+            <td>조커</td>
+        </tr>
+    </table>
+
+    <h1>기본 사용 방법 2</h1>
+    <table border="1" cellspacing="0" cellpading="5">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>국어점수</th>
+                <th>영어점수</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>슈퍼맨</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>배트맨</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+
+        <!-- 셀 합치기 -->
+        <!-- colspan = "합칠 셀 수" / 열병합-->
+        <!-- rowspan = "합칠 셀 수" / 행병합-->
+        <tfoot>
+            <tr>
+                <td rowspan="2">1</td>
+                <td colspan="2">2</td>               
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

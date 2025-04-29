@@ -6,11 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <label>ID</label><input type="text"/> <br/>
-    <label>PW</label><input type="text"/> <br/>
+    <label>ID: </label><input type="text" onblur="inp_id(event)"/> <br/>
+    <label>PW: </label><input type="text"/> <br/>
     <label>선택</label>
     <input type="radio" name="rat"/>내국인
     <input type="radio" name="rat"/>외국인 <br/>
+
+    <script>
+        function inp_id(e) {
+            const target = e.target.value;
+            if(target.trim().length == 0){
+                alert("아이디를 입력해 주세요.");
+                return false;
+            }
+        return true;
+            
+        }
+
+    </script>
     
 </body>
 </html>
